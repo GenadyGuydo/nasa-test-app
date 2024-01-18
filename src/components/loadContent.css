@@ -1,0 +1,38 @@
+
+.loader-wrapper{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(28, 33, 37);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+
+.loader-container{
+ min-width: 20%;
+ min-height: 30%;
+ align-items: center;
+ background-color: rgb(28, 33, 37);
+ border-radius: 16px;
+ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+ backdrop-filter: blur(2.8px);
+ -webkit-backdrop-filter: blur(2.8px);
+ border: 1px solid rgba(255, 255, 255, 0.47);
+}
+
+.title{
+  
+  margin: 50px;
+  font-size: 10vw;
+  color: #fff;
+  border: 1px solid #fff;
+  text-align: center;
+}
+
+.clip{
+  width: 100%;
+  text-align: center;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
