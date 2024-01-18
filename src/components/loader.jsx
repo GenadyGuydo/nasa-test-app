@@ -1,4 +1,4 @@
-import './loadContent.css';
+import '../CSS/loadContent.css';
 import RiseLoader from "react-spinners/RiseLoader";
 
 

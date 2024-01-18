@@ -1,4 +1,4 @@
-import '../App.css'
+import '../CSS/header.css'
 function Header() {
   return ( <div>
     <header className='header'>

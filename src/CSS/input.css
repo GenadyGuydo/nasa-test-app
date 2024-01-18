@@ -1,0 +1,27 @@
+.date_gap{
+  display: flex;
+  gap: 20px;
+}
+
+.input__area{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background-color: rgb(28, 33, 37);
+  height: 100%;
+  padding: 30px;
+  color: #fff;
+}
+
+.date_style{
+  background-color: rgb(28, 33, 37); ;
+  color: #fff;
+  padding: 25px;
+  border: 1px solid #fff;
+}
+
+.date_label{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../CSS/input.css'
 const DateInput = ({ label, value, onChange }) => {
   return (
     <div className='date_gap'>

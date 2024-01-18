@@ -67,7 +67,7 @@ const AstronomyPicture = () => {
           <button className='date_btn' onClick={handleFetchPictures}>Show Pictures</button>
         </div>
         <div className='current_date date_gap'>
-          <DateInput label="Selected Date" value={selectedDate} onChange={handleSelectedDateChange} />
+          <DateInput  label="Selected Date" value={selectedDate} onChange={handleSelectedDateChange} />
           <button className='date_btn' onClick={handleFetchPictureByDate}>Show Picture for Selected Date</button>
         </div>
       </div>
