@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/header';
 import DateInput from './components/dete_input';
 import ApiService from './API/ApiService';
+import PictureGallery from './components/picture';
 const AstronomyPicture = () => {
   const [pictureData, setPictureData] = useState([]);
   const [startDate, setStartDate] = useState('');
@@ -63,26 +64,14 @@ const AstronomyPicture = () => {
         <div className='interval_date date_gap'>
           <DateInput label="Start Date" value={startDate} onChange={handleStartDateChange} />
           <DateInput label="End Date" value={endDate} onChange={handleEndDateChange} />
-          <button onClick={handleFetchPictures}>Show Pictures</button>
+          <button className='date_btn' onClick={handleFetchPictures}>Show Pictures</button>
         </div>
         <div className='current_date date_gap'>
           <DateInput label="Selected Date" value={selectedDate} onChange={handleSelectedDateChange} />
-          <button onClick={handleFetchPictureByDate}>Show Picture for Selected Date</button>
+          <button className='date_btn' onClick={handleFetchPictureByDate}>Show Picture for Selected Date</button>
         </div>
       </div>
-      <div className='pages_area'>
-        {pictureData.map((picture) => (
-          <div className='area_pad' key={picture.date}>
-            <h2 className='area_pad'>{picture.title}</h2>
-            <p className='area_pad'>{picture.date}</p>
-            <div className='image_description__container'>  
-            
-            <p className='description_img area_pad'>{picture.explanation}</p>
-            <img className='area_pad' src={picture.url} alt={picture.title} />
-            </div>
-          </div>
-        ))}
-      </div>
+      <PictureGallery pictureData={pictureData} />
     </div>
   );
 };

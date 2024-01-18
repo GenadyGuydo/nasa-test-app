@@ -3,8 +3,8 @@ import React from 'react';
 const DateInput = ({ label, value, onChange }) => {
   return (
     <div className='date_gap'>
-      <label>{label}:</label>
-      <input type="date" value={value} onChange={onChange} />
+      <label className='date_label' >{label}:</label>
+      <input className='date_style' type="date" value={value} onChange={onChange} />
     </div>
   );
 };
