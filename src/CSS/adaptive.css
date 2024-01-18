@@ -1,27 +1,32 @@
 @media screen and (max-width: 1220px) {
-  .input__area{
-   flex-direction: column;
-   gap: 20px;
-   align-items: center;
-  }
-  .date_gap{
+  .input__area {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     align-items: center;
-    
-    
   }
-  .date_btn{
-    align-items: end;
+  .adaptive_gap{
+    gap: 20px;
   }
 }
 
 @media screen and (max-width: 760px) {
-  .interval_date{
+  .interval_date {
     flex-direction: column;
+    align-items: baseline;
+    
+    gap: 10px;
+  }
+  .current_date {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10px;
+  }
+  .date_btn{
+   width: 100%;
+  }
+  .date_gap{
     align-items: center;
   }
-  .current_date{
-    flex-direction: column;
-    align-items: center;
-  } 
-  
 }

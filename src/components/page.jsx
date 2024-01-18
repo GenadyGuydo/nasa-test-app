@@ -61,7 +61,7 @@ const AstronomyPicture = () => {
     <div>
      <Header/>
      <div className='input__area'>
-        <div className='interval_date date_gap'>
+        <div className='interval_date date_gap adaptive_gap'>
           <DateInput label="Start Date" value={startDate} onChange={handleStartDateChange} />
           <DateInput label="End Date" value={endDate} onChange={handleEndDateChange} />
           <button className='date_btn' onClick={handleFetchPictures}>Show Pictures</button>
