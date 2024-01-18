@@ -22,12 +22,25 @@ background-color: rgb(28, 33, 37);
   color: #fff;
 }
 
-.area_pad{
-  padding-top: 10px;
+.pages_area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.pages_area{
-  width: 100%;
-  text-align: center;
+
+.area_pad {
+  width: 100%; /* Ширина блока с изображением и текстом */
+  height: 100%;
+  padding-bottom: 20px;
+  position: relative; /* Позиционирование относительно контейнера */
   background-color: rgb(28, 33, 37);
+  text-align: center;
   color: #fff;
+}
+.image_description__container{
+  width: 80%; /* Ширина изображения внутри блока */
+  height: auto; /* Автоматическая высота */
+  display: block; /* Убираем пустые пространства под изображением */
+  margin: 0 auto;
+  position: relative;
 }

@@ -1,31 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import './App.css';
+import Header from './components/header';
+import DateInput from './components/dete_input';
+import ApiService from './API/ApiService';
 const AstronomyPicture = () => {
   const [pictureData, setPictureData] = useState([]);
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
   const [selectedDate, setSelectedDate] = useState('');
 
-  const fetchPictures = async (startDate, endDate) => {
+  const fetchPictures = async (start, end) => {
     try {
-      const response = await axios.get(
-        `https://api.nasa.gov/planetary/apod?api_key=ArKVftAes9hleWwh6yd8jejpQOS9pEsKxR8y5kN4&start_date=${startDate}&end_date=${endDate}`
-      );
-      setPictureData(response.data);
+      const data = await ApiService.fetchPictures(start, end);
+      setPictureData(data);
     } catch (error) {
-      console.error('Error fetching pictures:', error);
+      // Handle error if needed
     }
   };
 
   const fetchPictureByDate = async (date) => {
     try {
-      const response = await axios.get(
-        `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${date}`
-      );
-      setPictureData([response.data]);
+      const data = await ApiService.fetchPictureByDate(date);
+      setPictureData(data);
     } catch (error) {
-      console.error('Error fetching picture:', error);
+      // Handle error if needed
     }
   };
 
@@ -60,30 +58,28 @@ const AstronomyPicture = () => {
 
   return (
     <div>
-     <header className='header'>
-      <h1 className='logo'>Astronomy Pictures</h1>
-    </header>
+     <Header/>
      <div className='input__area'>
-      <div className='interval_date date_gap'>
-      <label>Start Date:</label>
-      <input type="date" value={startDate} onChange={handleStartDateChange} />
-      <label>End Date:</label>
-      <input type="date" value={endDate} onChange={handleEndDateChange} />
-      <button onClick={handleFetchPictures}>Show Pictures</button>
-      </div>
-      <div className='current_date date_gap'>
-        <label>Selected Date:</label>
-        <input type="date" value={selectedDate} onChange={handleSelectedDateChange} />
-        <button onClick={handleFetchPictureByDate}>Show Picture for Selected Date</button>
-      </div>
+        <div className='interval_date date_gap'>
+          <DateInput label="Start Date" value={startDate} onChange={handleStartDateChange} />
+          <DateInput label="End Date" value={endDate} onChange={handleEndDateChange} />
+          <button onClick={handleFetchPictures}>Show Pictures</button>
+        </div>
+        <div className='current_date date_gap'>
+          <DateInput label="Selected Date" value={selectedDate} onChange={handleSelectedDateChange} />
+          <button onClick={handleFetchPictureByDate}>Show Picture for Selected Date</button>
+        </div>
       </div>
       <div className='pages_area'>
         {pictureData.map((picture) => (
           <div className='area_pad' key={picture.date}>
             <h2 className='area_pad'>{picture.title}</h2>
             <p className='area_pad'>{picture.date}</p>
+            <div className='image_description__container'>  
+            
+            <p className='description_img area_pad'>{picture.explanation}</p>
             <img className='area_pad' src={picture.url} alt={picture.title} />
-            <p className='area_pad'>{picture.explanation}</p>
+            </div>
           </div>
         ))}
       </div>
