@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nasa-test-app/static/css/main.c5cd3e45.css",
+    "main.js": "/nasa-test-app/static/js/main.45782f4d.js",
+    "static/js/787.2e5a4112.chunk.js": "/nasa-test-app/static/js/787.2e5a4112.chunk.js",
+    "index.html": "/nasa-test-app/index.html",
+    "main.c5cd3e45.css.map": "/nasa-test-app/static/css/main.c5cd3e45.css.map",
+    "main.45782f4d.js.map": "/nasa-test-app/static/js/main.45782f4d.js.map",
+    "787.2e5a4112.chunk.js.map": "/nasa-test-app/static/js/787.2e5a4112.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c5cd3e45.css",
+    "static/js/main.45782f4d.js"
+  ]
+}
