@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import './App.css';
 const AstronomyPicture = () => {
   const [pictureData, setPictureData] = useState([]);
   const [startDate, setStartDate] = useState('');
@@ -60,24 +60,30 @@ const AstronomyPicture = () => {
 
   return (
     <div>
-      <h1>Astronomy Pictures</h1>
+     <header className='header'>
+      <h1 className='logo'>Astronomy Pictures</h1>
+    </header>
+     <div className='input__area'>
+      <div className='interval_date date_gap'>
       <label>Start Date:</label>
       <input type="date" value={startDate} onChange={handleStartDateChange} />
       <label>End Date:</label>
       <input type="date" value={endDate} onChange={handleEndDateChange} />
       <button onClick={handleFetchPictures}>Show Pictures</button>
-      <div>
+      </div>
+      <div className='current_date date_gap'>
         <label>Selected Date:</label>
         <input type="date" value={selectedDate} onChange={handleSelectedDateChange} />
         <button onClick={handleFetchPictureByDate}>Show Picture for Selected Date</button>
       </div>
-      <div>
+      </div>
+      <div className='pages_area'>
         {pictureData.map((picture) => (
-          <div key={picture.date}>
-            <h2>{picture.title}</h2>
-            <p>{picture.date}</p>
-            <img src={picture.url} alt={picture.title} />
-            <p>{picture.explanation}</p>
+          <div className='area_pad' key={picture.date}>
+            <h2 className='area_pad'>{picture.title}</h2>
+            <p className='area_pad'>{picture.date}</p>
+            <img className='area_pad' src={picture.url} alt={picture.title} />
+            <p className='area_pad'>{picture.explanation}</p>
           </div>
         ))}
       </div>

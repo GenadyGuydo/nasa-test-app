@@ -1,0 +1,33 @@
+.header{
+width: 100%;
+text-align: center;
+background-color: rgb(28, 33, 37);
+}
+
+.logo{
+  color: #fff;
+  padding: 30px;
+}
+.date_gap{
+  display: flex;
+  gap: 20px;
+}
+
+.input__area{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(28, 33, 37);
+  height: 100%;
+  padding: 30px;
+  color: #fff;
+}
+
+.area_pad{
+  padding-top: 10px;
+}
+.pages_area{
+  width: 100%;
+  text-align: center;
+  background-color: rgb(28, 33, 37);
+  color: #fff;
+}
