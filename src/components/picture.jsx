@@ -19,6 +19,8 @@ const PictureGallery = ({ pictureData }) => {
           <p className="area_pad">{picture.date}</p>
           <div className="image_description__container">
             <p className="description_img area_pad">{picture.explanation}</p>
+            <div className="cover__container">
+            
             <img
               className={`space_image area_pad ${
                 showFullImage === index ? "full_size" : ""
@@ -28,9 +30,9 @@ const PictureGallery = ({ pictureData }) => {
               style={{ height: showFullImage === index ? "100%" : "50%" }}
               onClick={() => handleImageClick(index)}
             />
-            
+            </div>
             {showFullImage === index && (
-              <div className="overlay" onClick={handleCloseFullImage}>
+              <div className="overlay " onClick={handleCloseFullImage}>
                 <img
                   className="full_size_image"
                   src={picture.url}

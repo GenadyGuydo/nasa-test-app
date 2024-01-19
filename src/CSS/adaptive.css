@@ -11,10 +11,13 @@
 }
 
 @media screen and (max-width: 760px) {
+  .input__area{
+    display: flex;
+    flex-direction: row;
+  }
   .interval_date {
     flex-direction: column;
     align-items: baseline;
-    
     gap: 10px;
   }
   .current_date {
@@ -30,3 +33,14 @@
     align-items: center;
   }
 }
+@media screen and (max-width: 490px) {
+  .input__area{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .description_img{
+     font-size: 10px;
+  }}
