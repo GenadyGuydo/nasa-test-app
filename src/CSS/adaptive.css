@@ -35,7 +35,7 @@
     align-items: center;
   }
 }
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 590px) {
   .input__area{
     display: flex;
     flex-direction: column;
